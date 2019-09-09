@@ -4,8 +4,10 @@ around downtown.
 
 It will need to be hosted at uzb.cash in the near future.
 
-The feature that needs to be implemented now is:
+TODO:
 **it needs to alert the Ching! service that a transaction has been sent**
+- Ask David to add "onTXSent" callback, so that we can it Ching endpoint with the new txHash
+- `https://us-central1-daipos.cloudfunctions.net/transactionBuffer?orderId=<orderId>&txHash=<txHash>&networkId=100`
 
 In order to assist in testing I have loaded a couple dozen IT tokens and a
 little gas on an address with the following private key:

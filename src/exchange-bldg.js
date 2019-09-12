@@ -1,6 +1,6 @@
 // import axios from "axios";
 import React from "react";
-const URLREGEX = /https:\/\/master.ching.store\/payment\/(0x[0-9a-f]{40})\/([\d\.]+)\/(\w*)/i;
+const URLREGEX = /payment\/(0x[0-9a-f]{40})\/([\d\.]+)\/(\w*)/i;
 
 // // @Aaron this is how Austin pings our servers
 // if (this.props.receipt && this.props.receipt.daiposOrderId) {

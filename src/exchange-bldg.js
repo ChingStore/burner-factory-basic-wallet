@@ -12,9 +12,9 @@ const URLREGEX = /https:\/\/master.ching.store\/payment\/(0x[0-9a-f]{40})\/([\d\
 //     this.props.receipt.result.transactionHash +
 //     "&networkId=100";
 //   console.log("url:", url);
-//   axios.get(url).then(response => {
-//     console.log("Finished hitting the Ching servers:", response);
-//   });
+// axios.get(url).then(response => {
+//   console.log("Finished hitting the Ching servers:", response);
+// });
 // }
 //
 // // @Aaron this is how Austin renders a ching order id
@@ -42,6 +42,15 @@ const URLREGEX = /https:\/\/master.ching.store\/payment\/(0x[0-9a-f]{40})\/([\d\
 
 export default class ExchangeBldg {
   initializePlugin(pluginContext) {
+    // pluginContext.onSent(tx => {
+    //   console.log({ tx });
+    //   if (tx.id === "test") {
+    //     // axios.get(url).then(response => {
+    //     //   console.log("Finished hitting the Ching servers:", response);
+    //     // });
+    //     return "/receive";
+    //   }
+    // });
     pluginContext.onQRScanned((qr, pluginctx) => {
       if (URLREGEX.test(qr)) {
         const scan = URLREGEX.exec(qr);
@@ -56,3 +65,24 @@ export default class ExchangeBldg {
     });
   }
 }
+
+// const Btn = ({ actions, burnerComponents }) => {
+//   const { Button } = burnerComponents;
+//   return <Button onClick={() => actions.send({
+//     to: '0x0000000000000000000000000000000000000000',
+//     ether: '0.1',
+//     id: 'test',
+//     asset: 'geth',
+//   })}>Send</Button>
+// }
+//
+// export default class SenderPlugin {
+//   initializePlugin(ctx) {
+//     ctx.addElement('home-top', Btn);
+//     ctx.onSent(tx => {
+//       if (tx.id === 'test') {
+//         return '/receive';
+//       }
+//     })
+//   }
+// }

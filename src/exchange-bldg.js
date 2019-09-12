@@ -36,13 +36,13 @@ const URLREGEX = /https:\/\/master.ching.store\/payment\/(0x[0-9a-f]{40})\/([\d\
 //     });
 //   }
 // }
+//
+// @Aaron ask David to add "onTXSent" callback, so that we can call Ching endpoint with the new txHash there
+// https://us-central1-daipos.cloudfunctions.net/transactionBuffer?orderId=<orderId>&txHash=<txHash>&networkId=100
 
 export default class ExchangeBldg {
   initializePlugin(pluginContext) {
     pluginContext.onQRScanned((qr, pluginctx) => {
-      axios.get(qr).then(response => {
-        console.log("Finished hitting the Ching servers:", response);
-      });
       if (URLREGEX.test(qr)) {
         const scan = URLREGEX.exec(qr);
         pluginctx.actions.send({

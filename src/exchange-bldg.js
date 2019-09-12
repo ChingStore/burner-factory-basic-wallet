@@ -1,4 +1,5 @@
-import axios from "axios";
+// import axios from "axios";
+import React from "react";
 const URLREGEX = /https:\/\/master.ching.store\/payment\/(0x[0-9a-f]{40})\/([\d\.]+)\/(\w*)/i;
 
 // // @Aaron this is how Austin pings our servers
@@ -68,21 +69,29 @@ export default class ExchangeBldg {
 
 // const Btn = ({ actions, burnerComponents }) => {
 //   const { Button } = burnerComponents;
-//   return <Button onClick={() => actions.send({
-//     to: '0x0000000000000000000000000000000000000000',
-//     ether: '0.1',
-//     id: 'test',
-//     asset: 'geth',
-//   })}>Send</Button>
-// }
+//   return (
+//     <Button
+//       onClick={() =>
+//         actions.send({
+//           to: "0x0000000000000000000000000000000000000000",
+//           ether: "0.1",
+//           id: "test",
+//           asset: "geth"
+//         })
+//       }
+//     >
+//       Send
+//     </Button>
+//   );
+// };
 //
 // export default class SenderPlugin {
 //   initializePlugin(ctx) {
-//     ctx.addElement('home-top', Btn);
+//     ctx.addElement("home-top", Btn);
 //     ctx.onSent(tx => {
-//       if (tx.id === 'test') {
-//         return '/receive';
+//       if (tx.id === "test") {
+//         return "/receive";
 //       }
-//     })
+//     });
 //   }
 // }

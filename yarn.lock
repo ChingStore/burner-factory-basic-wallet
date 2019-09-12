@@ -921,10 +921,10 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
-"@burner-wallet/assets@*", "@burner-wallet/assets@^0.0.20":
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/@burner-wallet/assets/-/assets-0.0.20.tgz#36fb9b314a653687b48eb87f996fc6e0ab6b6739"
-  integrity sha512-BQQKq6zH/KYK/0uTt/4o6DGZgWbY/vi0YJnYArJC2TkCJAbLrObZVut+Q4DqgaYPBcV3ofH8ypxJ8tCHDY2k6Q==
+"@burner-wallet/assets@*":
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/@burner-wallet/assets/-/assets-0.0.21.tgz#ed4690c58d069dea6e420091f7db59aa767c6b86"
+  integrity sha512-0s2UpxylaZwsJx9/+Cakh7snTWyiw5ig0soeavWbdJCkZAmpHqLL7FItGkdWG8qmi5TXLDg1bNFrA/UH0kVSyw==
   dependencies:
     isomorphic-fetch "^2.2.1"
     web3-utils "^1.0.0-beta.55"
@@ -957,6 +957,14 @@
   version "0.0.19"
   resolved "https://registry.yarnpkg.com/@burner-wallet/assets/-/assets-0.0.19.tgz#464f23a2a61d9a9929952fe30ecc261f3e0121e0"
   integrity sha512-QPmEUsrzAuYE1DTfyLnSR6Z1N9wqTIWQ9+Mq/Dfnntkmp6VPlh5LU2hFakPOwev4cdYhZfxITXWfjIcrTeMo3A==
+  dependencies:
+    isomorphic-fetch "^2.2.1"
+    web3-utils "^1.0.0-beta.55"
+
+"@burner-wallet/assets@^0.0.20":
+  version "0.0.20"
+  resolved "https://registry.yarnpkg.com/@burner-wallet/assets/-/assets-0.0.20.tgz#36fb9b314a653687b48eb87f996fc6e0ab6b6739"
+  integrity sha512-BQQKq6zH/KYK/0uTt/4o6DGZgWbY/vi0YJnYArJC2TkCJAbLrObZVut+Q4DqgaYPBcV3ofH8ypxJ8tCHDY2k6Q==
   dependencies:
     isomorphic-fetch "^2.2.1"
     web3-utils "^1.0.0-beta.55"
@@ -4018,9 +4026,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.3.191, electron-to-chromium@^1.3.247:
-  version "1.3.256"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.256.tgz#7f680d5f04df8e2bd9cb9758026d70f5ff1808a9"
-  integrity sha512-GHY1r2mO56BRMng6rkxxJvsWKtqy9k/IlSBrAV/VKwZKpTydVUJnOwajTNnl5uutJpthHgZy+HeofK5K6PqEgQ==
+  version "1.3.257"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.257.tgz#35da0ad5833b27184c8298804c498a4d2f4ed27d"
+  integrity sha512-EcKVmUeHCZelPA0wnIaSmpAN8karKhKBwFb+xLUjSVZ8sGRE1l3fst1zQZ7KJUkyJ7H5edPd4RP94pzC9sG00A==
 
 elliptic@6.0.2:
   version "6.0.2"
@@ -7719,9 +7727,9 @@ minipass@^2.2.1, minipass@^2.3.5:
     yallist "^3.0.0"
 
 minizlib@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/minizlib/-/minizlib-1.2.1.tgz#dd27ea6136243c7c880684e8672bb3a45fd9b614"
-  integrity sha512-7+4oTUOWKg7AuL3vloEWekXY2/D20cevzsrNT2kGWm+39J9hGTCBv8VI5Pm5lXZ/o3/mdR4f8rflAPhnQb8mPA==
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/minizlib/-/minizlib-1.2.2.tgz#6f0ccc82fa53e1bf2ff145f220d2da9fa6e3a166"
+  integrity sha512-hR3At21uSrsjjDTWrbu0IMLTpnkpv8IIMFDFaoz43Tmu4LkmAXfH44vNNzpTnf+OAQQCHrb91y/wc2J4x5XgSQ==
   dependencies:
     minipass "^2.2.1"
 

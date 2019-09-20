@@ -43,15 +43,15 @@ const URLREGEX = /payment\/(0x[0-9a-f]{40})\/([\d\.]+)\/(\w*)/i;
 
 export default class ExchangeBldg {
   initializePlugin(pluginContext) {
-    // pluginContext.onSent(tx => {
-    //   console.log({ tx });
-    //   if (tx.id === "test") {
-    //     // axios.get(url).then(response => {
-    //     //   console.log("Finished hitting the Ching servers:", response);
-    //     // });
-    //     return "/receive";
-    //   }
-    // });
+    pluginContext.onSent(tx => {
+      console.log({ tx });
+      // if (tx.id === "test") {
+      //   // axios.get(url).then(response => {
+      //   //   console.log("Finished hitting the Ching servers:", response);
+      //   // });
+      //   return "/receive";
+    });
+
     pluginContext.onQRScanned((qr, pluginctx) => {
       if (URLREGEX.test(qr)) {
         const scan = URLREGEX.exec(qr);

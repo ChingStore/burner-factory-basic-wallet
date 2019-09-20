@@ -1,4 +1,4 @@
-// import axios from "axios";
+import axios from "axios";
 import React from "react";
 const URLREGEX = /payment\/(0x[0-9a-f]{40})\/([\d\.]+)\/(\w*)/i;
 
@@ -45,10 +45,20 @@ export default class ExchangeBldg {
   initializePlugin(pluginContext) {
     pluginContext.onSent(tx => {
       console.log({ tx });
+
+      let url =
+        "https://us-central1-daipos.cloudfunctions.net/transactionBuffer?orderId=" +
+        tx.message +
+        "&txHash=" +
+        tx.hash +
+        "&networkId=100";
+
+      console.log("url:", url);
+
       // if (tx.id === "test") {
-      //   // axios.get(url).then(response => {
-      //   //   console.log("Finished hitting the Ching servers:", response);
-      //   // });
+      axios.get(url).then(response => {
+        console.log("Finished hitting the Ching servers:", response);
+      });
       //   return "/receive";
     });
 

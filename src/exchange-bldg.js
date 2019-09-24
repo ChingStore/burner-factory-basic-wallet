@@ -3,6 +3,14 @@ import React from "react";
 const URLREGEX = /payment\/(0x[0-9a-f]{40})\/([\d\.]+)\/(\w*)/i;
 
 export default class ExchangeBldg {
+  constructor() {
+    // this.assetId = assetId;
+    // this.contractAddress = contractAddress;
+    // this.network = network;
+    //
+    // this.contract = null;
+  }
+
   initializePlugin(pluginContext) {
     pluginContext.onSent(tx => {
       console.log({ tx });
@@ -36,4 +44,8 @@ export default class ExchangeBldg {
       }
     });
   }
+
+  getWeb3() {
+    return this._pluginContext.getWeb3(this.network);
+  };
 }

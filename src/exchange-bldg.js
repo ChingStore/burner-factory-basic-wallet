@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import Selector from "./ui/ExchBldg"
 import SendPage from "@burner-wallet/ui/dist/Pages/SendPage"
-const URLREGEX = /payment\/(0x[0-9a-f]{40})\/([\d\.]+)\/(\w*)/i;
+const URLREGEX = /payment\/(0x[0-9a-f]{40})\/(\w*)\/([\d\.]+)\/(\w*)/i;
 
 export default class ExchangeBldg {
   constructor() {
@@ -25,9 +25,9 @@ export default class ExchangeBldg {
 
         pluginctx.actions.send({
           to: scan[1],
-          asset: 'it',
-          ether: scan[2],
-          message: scan[3]
+          asset: scan[2],
+          ether: scan[3],
+          message: scan[4]
         })
 
         return true;

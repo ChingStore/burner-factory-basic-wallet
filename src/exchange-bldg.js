@@ -1,10 +1,11 @@
 import axios from "axios";
 import React from "react";
+import Selector from "./ui/ExchBldg"
 const URLREGEX = /payment\/(0x[0-9a-f]{40})\/([\d\.]+)\/(\w*)/i;
 
 export default class ExchangeBldg {
   constructor() {
-    // this.assetId = assetId;
+    this.assetId = "it";
     // this.contractAddress = contractAddress;
     // this.network = network;
     //
@@ -12,6 +13,10 @@ export default class ExchangeBldg {
   }
 
   initializePlugin(pluginContext) {
+    this._pluginContext = pluginContext;
+
+    pluginContext.addElement('home-top', Selector)
+
     pluginContext.onSent(tx => {
       console.log({ tx });
 
@@ -30,12 +35,13 @@ export default class ExchangeBldg {
     });
 
     pluginContext.onQRScanned((qr, pluginctx) => {
+
       if (URLREGEX.test(qr)) {
         const scan = URLREGEX.exec(qr);
 
         pluginctx.actions.send({
           to: scan[1],
-          asset: "it",
+          asset: this.state.assetId,
           ether: scan[2],
           message: scan[3]
         });

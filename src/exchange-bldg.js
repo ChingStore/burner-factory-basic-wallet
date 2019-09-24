@@ -1,21 +1,22 @@
 import axios from "axios";
 import React from "react";
 import Selector from "./ui/ExchBldg"
+import SendPage from "@burner-wallet/ui/dist/Pages/SendPage"
 const URLREGEX = /payment\/(0x[0-9a-f]{40})\/([\d\.]+)\/(\w*)/i;
 
 export default class ExchangeBldg {
   constructor() {
-    this.assetId = "it";
-    // this.contractAddress = contractAddress;
-    // this.network = network;
-    //
-    // this.contract = null;
+    // this.state = {
+    //   asset:"it",
+    //   to:'0xe8bF424E047372d249d0826c5567655ba3B72f18'
+    // }
   }
 
   initializePlugin(pluginContext) {
     this._pluginContext = pluginContext;
 
     // pluginContext.addElement('home-top', Selector)
+    // pluginContext.addPage('/pay', SendPage)
 
     pluginContext.onQRScanned((qr, pluginctx) => {
 
@@ -24,10 +25,10 @@ export default class ExchangeBldg {
 
         pluginctx.actions.send({
           to: scan[1],
-          asset: this.state.assetId,
+          asset: 'it',
           ether: scan[2],
           message: scan[3]
-        });
+        })
 
         return true;
       }

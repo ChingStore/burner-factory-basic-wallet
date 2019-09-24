@@ -15,24 +15,7 @@ export default class ExchangeBldg {
   initializePlugin(pluginContext) {
     this._pluginContext = pluginContext;
 
-    pluginContext.addElement('home-top', Selector)
-
-    pluginContext.onSent(tx => {
-      console.log({ tx });
-
-      let url =
-        "https://us-central1-daipos.cloudfunctions.net/transactionBuffer?orderId=" +
-        tx.message +
-        "&txHash=" +
-        tx.hash +
-        "&networkId=100";
-
-      console.log("url:", url);
-
-      axios.get(url).then(response => {
-        console.log("Finished hitting the Ching servers:", response);
-      });
-    });
+    // pluginContext.addElement('home-top', Selector)
 
     pluginContext.onQRScanned((qr, pluginctx) => {
 
@@ -48,6 +31,23 @@ export default class ExchangeBldg {
 
         return true;
       }
+    });
+
+    pluginContext.onSent(tx => {
+      console.log({ tx });
+
+      let url =
+      "https://us-central1-daipos.cloudfunctions.net/transactionBuffer?orderId=" +
+      tx.message +
+      "&txHash=" +
+      tx.hash +
+      "&networkId=100";
+
+      console.log("url:", url);
+
+      axios.get(url).then(response => {
+        console.log("Finished hitting the Ching servers:", response);
+      });
     });
   }
 

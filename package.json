@@ -1,13 +1,14 @@
 {
   "name": "basic-wallet",
   "version": "0.1.0",
+  "homepage" : "http://uzb.cash",
   "private": true,
   "dependencies": {
     "@burner-wallet/assets": "^0.0.20",
     "@burner-wallet/core": "^0.0.22",
     "@burner-wallet/exchange": "^0.0.5",
     "@burner-wallet/plugins": "^0.0.3",
-    "@burner-wallet/ui": "^0.0.35",
+    "@burner-wallet/ui": "^0.0.36",
     "@types/jest": "24.0.13",
     "@types/node": "12.0.4",
     "@types/react": "16.8.19",

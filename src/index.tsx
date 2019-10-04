@@ -43,15 +43,11 @@ const core = new BurnerCore({
     new InfuraGateway(process.env.REACT_APP_INFURA_KEY),
     new XDaiGateway()
   ],
-  assets: [xdai, exchangeBldg, brass, it]
-});
-
-const exchange = new Exchange({
-  pairs: [xdaiBridge, uniswapDai]
+  assets: [exchangeBldg, brass, it, xdai]
 });
 
 const BurnerWallet = () => (
-  <BurnerUI core={core} plugins={[exchange, new ExchangeBldg()]} />
+  <BurnerUI core={core} plugins={[new ExchangeBldg()]} />
 );
 
 ReactDOM.render(<BurnerWallet />, document.getElementById("root"));

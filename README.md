@@ -2,7 +2,8 @@ This is a version of Burner Wallet that will allow The Exchange Building to
 use many different custom tokens on the xDai chain with the Ching! PoS's
 around downtown.
 
-It will need to be hosted at uzb.cash in the near future.
+Master is autodeployed to burner.ching.store.
+Also osted at uzb.cash.
 
 TODO:
 **it needs to alert the Ching! service that a transaction has been sent**

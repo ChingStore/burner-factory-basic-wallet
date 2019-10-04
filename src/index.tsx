@@ -46,12 +46,8 @@ const core = new BurnerCore({
   assets: [exchangeBldg, brass, it, xdai]
 });
 
-// const exchange = new Exchange({
-//   pairs: [xdaiBridge, uniswapDai]
-// });
-
 const BurnerWallet = () => (
-  <BurnerUI core={core} plugins={[ new ExchangeBldg()]} />
+  <BurnerUI core={core} plugins={[new ExchangeBldg()]} />
 );
 
 ReactDOM.render(<BurnerWallet />, document.getElementById("root"));

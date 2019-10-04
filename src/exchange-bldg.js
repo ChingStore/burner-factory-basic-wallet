@@ -5,18 +5,8 @@ import SendPage from "@burner-wallet/ui/dist/Pages/SendPage"
 const URLREGEX = /payment\/(0x[0-9a-f]{40})\/(\w*)\/([\d\.]+)\/(\w*)/i;
 
 export default class ExchangeBldg {
-  constructor() {
-    // this.state = {
-    //   asset:"it",
-    //   to:'0xe8bF424E047372d249d0826c5567655ba3B72f18'
-    // }
-  }
-
   initializePlugin(pluginContext) {
     this._pluginContext = pluginContext;
-
-    // pluginContext.addElement('home-top', Selector)
-    // pluginContext.addPage('/pay', SendPage)
 
     pluginContext.onQRScanned((qr, pluginctx) => {
 

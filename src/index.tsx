@@ -4,8 +4,6 @@ import ReactDOM from "react-dom";
 
 import { xdai, ERC20Asset } from "@burner-wallet/assets";
 import BurnerCore from "@burner-wallet/core";
-import Exchange from "@burner-wallet/exchange";
-import { xdaiBridge, uniswapDai } from "@burner-wallet/exchange/pairs";
 import { InjectedSigner, LocalSigner } from "@burner-wallet/core/signers";
 import {
   InfuraGateway,
@@ -48,12 +46,8 @@ const core = new BurnerCore({
   assets: [xdai, exchangeBldg, brass, it]
 });
 
-const exchange = new Exchange({
-  pairs: [xdaiBridge, uniswapDai]
-});
-
 const BurnerWallet = () => (
-  <BurnerUI core={core} plugins={[exchange, new ChingPlugin()]} />
+  <BurnerUI core={core} plugins={[new ChingPlugin()]} />
 );
 
 ReactDOM.render(<BurnerWallet />, document.getElementById("root"));

@@ -1,0 +1,21 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "https://github.com/mars/create-react-app-buildpack.git"
+    }
+  ],
+  "env": {
+    "REACT_APP_INFURA_KEY": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "name": "burner-factory-basic-wallet",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}

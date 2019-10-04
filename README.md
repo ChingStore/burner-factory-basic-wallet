@@ -8,7 +8,7 @@ It will need to be hosted at uzb.cash in the near future.
 
 In order to assist in testing I have loaded a couple dozen IT tokens and a
 little gas on an address with the following private key:
-`4a653f2dd3509a5e1fb0961330c65e80af1d094fbf8fc49c0b2bff01ba20f580`
+`4a653f2dd3509a5e1fb0961330c65e80af1d094fbf8fc49c0b2bff01ba20f580` or `0x4a653f2dd3509a5e1fb0961330c65e80af1d094fbf8fc49c0b2bff01ba20f580` if the leading '0x' identifier is required.
 
 The primary functionality exists in src/exchange-bldg.js
 

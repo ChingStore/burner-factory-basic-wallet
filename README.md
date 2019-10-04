@@ -2,7 +2,7 @@ This is a version of Burner Wallet that will allow The Exchange Building to
 use many different custom tokens on the xDai chain with the Ching! PoS's
 around downtown.
 
-It will need to be hosted at uzb.cash in the near future.
+Hosted at uzb.cash.
 
 - `https://us-central1-daipos.cloudfunctions.net/transactionBuffer?orderId=<orderId>&txHash=<txHash>&networkId=100`
 

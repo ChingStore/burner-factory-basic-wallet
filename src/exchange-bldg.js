@@ -1,7 +1,4 @@
 import axios from "axios";
-import React from "react";
-import Selector from "./ui/ExchBldg"
-import SendPage from "@burner-wallet/ui/dist/Pages/SendPage"
 const URLREGEX = /payment\/(0x[0-9a-f]{40})\/(\w*)\/([\d\.]+)\/(\w*)/i;
 
 export default class ExchangeBldg {

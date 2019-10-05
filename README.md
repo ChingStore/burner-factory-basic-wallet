@@ -10,7 +10,7 @@ TODO:
 ## Exchange Building version
 `exchange-building` is autodeployed to http://uzb-burner.ching.store
 
-PK with test tokens (IT) and a little gas: `0x4a653f2dd3509a5e1fb0961330c65e80af1d094fbf8fc49c0b2bff01ba20f580`
+PK with test tokens (`IT`) and a little gas: `0x4a653f2dd3509a5e1fb0961330c65e80af1d094fbf8fc49c0b2bff01ba20f580`
 
 TODO:
 - [ ] Set up autodeployments to https://uzb.cash

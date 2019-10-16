@@ -20,17 +20,17 @@ function getOrderId(txMessage) {
 
 export default class Ching {
   initializePlugin(pluginContext) {
-    // Add link to ching.store
-    pluginContext.addElement('home-bottom', () =>
-      <a
-        href="https://app.ching.store"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ display: 'block', color: "#333333" }}
-      >
-        Make your own store with Ching!
-      </a>
-    )
+    // // Add link to ching.store
+    // pluginContext.addElement('home-bottom', () =>
+    //   <a
+    //     href="https://app.ching.store"
+    //     target="_blank"
+    //     rel="noopener noreferrer"
+    //     style={{ display: 'block', color: "#333333" }}
+    //   >
+    //     Make your own store with Ching!
+    //   </a>
+    // )
 
     // Handle Ching QR codes
     pluginContext.onQRScanned((qr, pluginCtx) => {

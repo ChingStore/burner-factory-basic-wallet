@@ -39,7 +39,21 @@ const transit = new ERC20Asset({
   id: "transit",
   name: "TRANSIT",
   network: "100",
-  address: "0x4FD58b584aD476FcA616B252743730bD8edC315d"
+  address: "0x628e704d318d44CABE1f5C96dEb663B296E2Ef5e"
+});
+
+const sams = new ERC20Asset({
+  id: "sams",
+  name: "SAMS",
+  network: "100",
+  address: "0xa255aA327A63f7DBea1783512F54FFE187765d81"
+});
+
+const trf = new ERC20Asset({
+  id: "trf",
+  name: "TRF",
+  network: "100",
+  address: "0xFEA8fb1CE5463A9f899Ad0399Afc9352023DBd0f"
 });
 
 const core = new BurnerCore({
@@ -49,7 +63,7 @@ const core = new BurnerCore({
     new InfuraGateway(process.env.REACT_APP_INFURA_KEY),
     new XDaiGateway()
   ],
-  assets: [exch, brass, it, transit, xdai]
+  assets: [exch, brass, it, transit, sams, trf, xdai]
 });
 
 const BurnerWallet = () => (

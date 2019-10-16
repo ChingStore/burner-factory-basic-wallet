@@ -1,5 +1,5 @@
 import axios from "axios";
-import React from 'react';
+// import React from 'react';
 
 function getTxDetails(qr) {
   const REGEX = /\/payment\/(0x[0-9a-f]{40})\/((\D\w*)\/)?([\d.]+)\/(\w*)/i
